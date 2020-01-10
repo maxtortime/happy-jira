@@ -1,0 +1,21 @@
+{
+  "name": "HAPPY JIRA",
+  "version": "1.0",
+  "description": "JIRA 이슈 내용을 클릭하면 편집이 되는 기능을 해제합니다. 편집을 하고 싶을 경우 마우스를 올리면 우측 상단에 연필 아이콘이 뜨는데 그걸 누르면 됩니다.",
+  "manifest_version": 2,
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["지라주소/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon_128.png"
+  },
+  "icons": {
+    "128": "icon_128.png"
+  }
+}
